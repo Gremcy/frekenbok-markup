@@ -1,0 +1,117 @@
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 100px 63px;
+  background: #0a2d73;
+  @include md {
+    padding: 40px 40px 60px;
+    flex-direction: column;
+  }
+  @include sm {
+    padding: 30px 60px 48px;
+  }
+}
+.footer-left {
+  display: flex;
+  width: 64.193548%; /* 796/1240 */
+  margin-right: 80px;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  @include md {
+    border: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+  @include sm {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer-left-logo {
+  margin-right: 12.562814%; /* 100/796 */
+  @include sm {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+.footer-product {
+}
+.footer-product-top {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Calibri;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.footer-product-container {
+  display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+}
+.footer-product-container-col {
+  width: 48%;
+  color: var(--White, #fff);
+  font-family: Calibri;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  a {
+    margin-bottom: 8px;
+    display: block;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+.footer-right {
+  @include md {
+    margin-left: 38%;
+  }
+  @include sm {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.footer-social {
+}
+.footer-social-top {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Calibri;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: block;
+    margin-right: 12px;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  @include sm {
+    width: 100%;
+    justify-content: space-between;
+    a {
+      width: 45px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

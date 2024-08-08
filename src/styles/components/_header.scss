@@ -1,0 +1,200 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 100px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.02);
+  z-index: 10;
+  border-bottom: 1px solid #fff;
+  &.scroll {
+    background: rgba(28, 24, 64, 0.5);
+    backdrop-filter: blur(5px);
+  }
+  @include md {
+    padding: 0 30px;
+    height: 54px;
+  }
+  @include sm {
+    height: 55px;
+    padding: 0 20px;
+  }
+}
+.header-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  display: block;
+  @include md {
+    width: 80px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.header-burger {
+  display: none;
+  @include md {
+    display: block;
+  }
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include md {
+    display: none;
+  }
+}
+.header-right-menu {
+  display: flex;
+  align-items: center;
+}
+.header-right-menu-item {
+  color: #fff;
+  font-family: Cera Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 20px;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid #ff4438;
+  }
+  @include md {
+    font-size: 16px;
+    margin: 0 20px;
+  }
+}
+
+.header-right-menu-has {
+  height: 70px;
+  position: relative;
+  color: #fff;
+  font-family: Cera Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  cursor: pointer;
+  .header-right-menu-has-title {
+    border-bottom: 2px solid transparent;
+  }
+  img {
+    margin-left: 3px;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    img {
+      transform: rotate(180deg);
+    }
+    .header-right-menu-has-title {
+      border-bottom: 2px solid #ff4438;
+    }
+    .header-right-menu-drop {
+      display: block;
+    }
+  }
+}
+.header-right-menu-drop {
+  width: 200px;
+  position: absolute;
+  left: 0;
+  top: 48px;
+  display: none;
+  padding-top: 15px;
+  padding: 15px 10px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.header-sign-btn {
+  width: fit-content;
+  padding: 9px 27px;
+  border-radius: 30px;
+  background: #fff;
+  margin-left: 25px;
+  color: #212121;
+  text-align: center;
+  font-family: Cera Pro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    background: #ff4438;
+    color: #fff;
+  }
+  @include md {
+    display: none;
+  }
+}
+
+.header-right-menu-drop-category {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 10px;
+  &:last-child {
+    border: none;
+    margin-bottom: 0;
+  }
+}
+.header-right-menu-drop-category-name {
+  color: #cdcdcd;
+  font-family: Cera Pro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.header-right-menu-drop-item {
+  margin-bottom: 7px;
+  display: block;
+}
+.header-right-menu-drop-item-name {
+  color: #212121;
+  font-family: Cera Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header-right-menu-drop-item-bottom {
+  display: flex;
+  align-items: center;
+  p {
+    color: #ff4438;
+    font-family: Cera Pro;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    border: none;
+  }
+}
+.header-right-menu-drop-item-bottom-circle {
+  width: 5px;
+  height: 5px;
+  background: #ff4438;
+  border-radius: 50%;
+  margin: 0 5px;
+}
